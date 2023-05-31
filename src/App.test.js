@@ -1,5 +1,6 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
+import userEvent from "@testing-library/user-event";
 import App from './App';
 
 // Testing 
@@ -8,4 +9,13 @@ test('ToDo', () => {
 
   // Check for elements we expect to see
   getByText('Flow App');
+});
+
+test('add items to list', () => {
+  const { getByText, getByRole } = render(<App/>);
+
+  const input = document.getElementById("add-todo");
+  userEvent.type(input, "learn spanish");
+  fireEvent.submit(input); // userEvent.click(buton);
+  getByText('learn spanish');
 });

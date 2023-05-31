@@ -13,8 +13,9 @@ function TodoForm({addTodo}){
   }
   
   return (
-    <form id="todo-form" onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <input 
+        id="add-todo"
         type="text"
         className="input"
         value={value}
