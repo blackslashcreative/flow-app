@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: 'Arial';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+code {
+  font-family: Arial;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+  padding: 30px;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+h1 {
+  margin-bottom: 7px;
+  background-image: #0f0c29;  /* fallback for old browsers */
+  background-image: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+  background-image: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.todo-list{
+  background: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 4px;
+  padding: 15px;
+  max-width: 400px;
+}
+
+.todo{
+  background: #fff;
+  box-shadow: 1px 1px 1px rgba(0,0,0, 0.1);
+  padding: 3px 10px;
+  font-size: 18px;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  display:flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  line-height: 1.3em;
 }
 
-.App-link {
-  color: #61dafb;
+.input{
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  padding: 1rem;
+  height: 2.25em;
+  font-size: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input::placeholder {
+  opacity: 0.5;
+}
+
+.input:focus::placeholder {
+  opacity: 0;
+}
+
+.todo .hover {
+  margin-left: 1em;
+  opacity: 0;
+}
+
+.todo:hover {
+  cursor: pointer;
+}
+
+.todo:hover .hover {
+  opacity: 1;
 }

@@ -1,23 +1,44 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Todo from './components/Todo.jsx';
+import TodoForm from './components/Form.jsx';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  /* ToDos List Initialize State */ 
+  const [todos, setTodos] = React.useState([
+    {
+      text: 'build todo functionality',
+      isCompleted: false,
+    },
+    {
+      text: 'add a focus timer',
+      isCompleted: false,
+    },
+    {
+      text: 'package as a lightweight desktop app',
+      isCompleted: false,
+    }
+  ]);
+
+  const addTodo = text => {
+    const newTodos = [...todos, {text:text, isCompleted:false}]; // update todos state, adding new one
+    setTodos(newTodos);
+  }
+  
+  const removeTodo = index  => {
+    let temp = [...todos];
+    temp.splice(index,1);
+    setTodos(temp);
+  }
+
+  /* JSX list of todo's and form to add a new one */ 
+  return(
+    <div className="app">
+      <h1><i className="ri-refresh-line"></i> Flow App</h1>
+      <div className="todo-list">
+        {todos.map( (todo, index) => <Todo todo={todo} index={index} remove={removeTodo}/> )}
+        <TodoForm addTodo={addTodo}/>
+      </div>
     </div>
   );
 }
