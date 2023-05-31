@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Todo from './components/Todo.jsx';
 import TodoForm from './components/Form.jsx';
+import FlowIcon from './restart-line.svg';
 
 function App() {
   /* ToDos List Initialize State */ 
@@ -34,7 +35,9 @@ function App() {
   /* JSX list of todo's and form to add a new one */ 
   return(
     <div className="app">
-      <h1><i className="ri-refresh-line"></i> Flow App</h1>
+      <div id="logo">
+        <img src={FlowIcon} alt="Flow Logo" /> <h1>Flow App</h1>
+      </div>
       <div className="todo-list">
         {todos.map( (todo, index) => <Todo todo={todo} index={index} remove={removeTodo}/> )}
         <TodoForm addTodo={addTodo}/>

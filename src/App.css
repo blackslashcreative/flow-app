@@ -25,6 +25,15 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
+#logo h1, #logo img {
+  display: inline-block;
+}
+
+#logo img {
+  height: 1.6em;
+  margin-right: 5px;
+}
+
 .todo-list{
   background: #0f0c29;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
