@@ -16,9 +16,8 @@ code {
 
 h1 {
   margin-bottom: 7px;
-  background-image: #0f0c29;  /* fallback for old browsers */
-  background-image: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-  background-image: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: -webkit-linear-gradient(to right, #ffffff, #eeeeee);  /* Chrome 10-25, Safari 5.1-6 */
+  background-image: linear-gradient(to right, #ffffff #eeeeee); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
