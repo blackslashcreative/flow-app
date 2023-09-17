@@ -8,11 +8,11 @@ function App() {
   /* ToDos List Initialize State */ 
   const [todos, setTodos] = React.useState([
     {
-      text: 'build todo functionality',
+      text: 'add a focus timer',
       isCompleted: false,
     },
     {
-      text: 'add a focus timer',
+      text: 'add accounts and todo history',
       isCompleted: false,
     },
     {

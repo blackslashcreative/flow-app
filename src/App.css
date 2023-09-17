@@ -22,6 +22,7 @@ h1 {
   -moz-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 3em;
 }
 
 #logo h1, #logo img {
@@ -29,7 +30,7 @@ h1 {
 }
 
 #logo img {
-  height: 1.6em;
+  height: 2.2em;
   margin-right: 5px;
 }
 
@@ -50,9 +51,12 @@ h1 {
   margin-bottom: 6px;
   border-radius: 3px;
   display:flex;
-  align-items: center;
-  justify-content: space-between;
-  line-height: 1.3em;
+  flex-direction:row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  line-height: 1.5em;
+  padding-left: 32px;
+  position: relative;
 }
 
 .input{
@@ -74,15 +78,27 @@ h1 {
   opacity: 0;
 }
 
-.todo .hover {
-  margin-left: 1em;
+.todo .icon {
+  position:absolute;
+  left: 6px;
+  top: 7px;
+}
+
+.todo .icon.hover, 
+.todo:hover .icon.nohover {
   opacity: 0;
+}
+
+.todo:hover .icon.hover, 
+.todo icon.nohover {
+  opacity: 1;
 }
 
 .todo:hover {
   cursor: pointer;
 }
 
-.todo:hover .hover {
-  opacity: 1;
+#add-todo:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px #421d6c;
 }
